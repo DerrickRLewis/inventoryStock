@@ -15,21 +15,28 @@ public class Main {
 
     public static void main(String[] args) {
 
+        Scanner scanner = new Scanner(System.in);
 
-        HashMap<String, Double> supplies = new HashMap<String, Double>();
+        HashMap<String, Integer> supplies = new HashMap<>();
 
-        supplies.put("Sugar", new Double(3.34));
-        supplies.put("Salt", new Double(1.22));
-        supplies.put("Pepper", new Double(1.00));
-        supplies.put("Basil", new Double(9.22));
-        supplies.put("Garlic", new Double(-19.08));
+        supplies.put("A", new Integer(3));
+        supplies.put("Salt", new Integer(1));
+        supplies.put("Pepper", new Integer(1));
+        supplies.put("Basil", new Integer(9));
+        supplies.put("Garlic", new Integer(9));
+
+
+
+
+
+
+
 
 
 
         System.out.println("WELCOME TO INVENTORY");
         System.out.println("Please choose one of the following\n");
-        NewItem newItem = new NewItem("name", 7);
-        Scanner scanner = new Scanner(System.in);
+
 
         while (true) {
             System.out.println("1|| Add new item to inventory\n");
@@ -41,11 +48,16 @@ public class Main {
 
             if (option.equals("1")) {
 
-                // Get name of item from user = Item.getItem()
-                newItem.getName();
-                newItem.getQty();
+                System.out.println("What is the name of the item that you want to add to the inventory\n");
 
+                String optionName = scanner.nextLine();
+                System.out.println("How many would you like to add to inventory?\n");
+
+                Integer optionQty = Integer.parseInt(scanner.nextLine());
+
+                supplies.put(optionName,optionQty);
                // String option2 = scanner.nextLine();
+
 
 
                 //System.out.println("Now enter How many "+ newItem.name +" do you want to add to inventory?\n");
