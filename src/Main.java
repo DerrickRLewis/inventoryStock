@@ -12,26 +12,19 @@ import java.util.Scanner;
 
 public class Main {
 
-
+    static HashMap<String, Integer> supplies = new HashMap<>();
+    static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
 
-        Scanner scanner = new Scanner(System.in);
 
-        HashMap<String, Integer> supplies = new HashMap<>();
+
+
 
         supplies.put("A", new Integer(3));
         supplies.put("Salt", new Integer(1));
         supplies.put("Pepper", new Integer(1));
         supplies.put("Basil", new Integer(9));
         supplies.put("Garlic", new Integer(9));
-
-
-
-
-
-
-
-
 
 
         System.out.println("WELCOME TO INVENTORY");
@@ -55,35 +48,54 @@ public class Main {
 
                 Integer optionQty = Integer.parseInt(scanner.nextLine());
 
-                supplies.put(optionName,optionQty);
-               // String option2 = scanner.nextLine();
-
-
+                supplies.put(optionName, optionQty);
+                // String option2 = scanner.nextLine();
+                //createItem(optionName,optionQty,String);
 
                 //System.out.println("Now enter How many "+ newItem.name +" do you want to add to inventory?\n");
                 //Integer.parseInt(scanner.nextLine());
 
 
-            }else if (option.equals("2")){
+            } else if (option.equals("2")) {
 
                 System.out.println("Enter the name of the item you want to remove from the inventory\n");
                 String option3 = scanner.nextLine();
-                System.out.println(option3+" will be removed from the inventory");
+               // System.out.println(option3 + " will be removed from the inventory");
 
+                System.out.printf("%s's will be removed from the inventory \n", option3);
 
-            }else if (option.equals("3")) {
+            } else if (option.equals("3")) {
                 System.out.println("Enter the name and the qty of the item that you want to update:\n");
                 String option4 = scanner.nextLine();
 
-                System.out.println(option4 + " will be changed");
+                //System.out.println(option4 + " will be changed");
+                System.out.printf("%s's will be changed \n", option4);
 
 
-            }else  if (option.equals("4")){
+            } else if (option.equals("4")) {
                 System.out.println(supplies);
-
 
 
             }
         }
     }
+
+
+    static InventoryItem createItem(String name, int quantity, String category) {
+
+        System.out.println("What is the name of the item that you want to add to the inventory\n");
+
+        String optionName = scanner.nextLine();
+        System.out.println("How many would you like to add to inventory?\n");
+
+        Integer optionQty = Integer.parseInt(scanner.nextLine());
+
+        supplies.put(optionName, optionQty);
+
+
+        return new InventoryItem();
+
+    }
 }
+
+

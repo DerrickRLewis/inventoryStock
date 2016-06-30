@@ -1,0 +1,13 @@
+/**
+ * Created by admin on 5/1/16.
+ */
+public class Carrots extends InventoryItem {
+
+
+
+    public Carrots(String name, int quantity, String category) {
+        this.name = name;
+        this.quantity = quantity;
+        this.category = "Vegetable";
+    }
+}
