@@ -20,12 +20,7 @@ public class Main {
 
 
 
-        supplies.put("A", new Integer(3));
-        supplies.put("Salt", new Integer(1));
-        supplies.put("Pepper", new Integer(1));
-        supplies.put("Basil", new Integer(9));
-        supplies.put("Garlic", new Integer(9));
-
+       
 
         System.out.println("WELCOME TO INVENTORY");
         System.out.println("Please choose one of the following\n");
